@@ -1,0 +1,190 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;600&display=swap");
+
+:root {
+  --primary-color: #ff0077;
+  --secondary-color: #ff4da6;
+  --dark-bg: #000000;
+  --light-bg: #1a1a1a;
+  --text-color: #ffffff;
+  --gradient: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: rgba(26, 26, 26, 0.9);
+  position: fixed;
+  width: 90%;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s;
+  font-family: "Orbitron", sans-serif;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.typing::after {
+  content: "|";
+  animation: typing 3s infinite;
+  font-family: "Orbitron", sans-serif;
+}
+
+@keyframes typing {
+  0% {
+    content: "|";
+  }
+  50% {
+    content: "Developer |";
+  }
+  100% {
+    content: "ML Enthusiast |";
+  }
+}
+
+
+.btn {
+  background: var(--gradient);
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: transform 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+
+section {
+  padding: 100px 12%;
+  text-align: center;
+}
+
+
+.skill-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.skill-list span {
+  background: var(--primary-color);
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+}
+
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  padding: 0 10%;
+}
+
+.project-card {
+  background: var(--light-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 0, 119, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255, 0, 119, 0.6);
+}
+
+
+#contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Orbitron", sans-serif;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
